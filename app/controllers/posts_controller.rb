@@ -17,4 +17,5 @@ class PostsController < ApplicationController
       redirect_to "/places/#{@post["place_id"]}"
     else
       flash["notice"] = "You must be logged in."
+    end
   end
