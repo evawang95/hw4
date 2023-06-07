@@ -14,5 +14,19 @@ class PostsController < ApplicationController
     @post.save
     redirect_to "/places/#{@post["place_id"]}"
   end
-
+  
+  def update
+    @post = Post.find_by({ "id" => params["id"] })
+    if @current_user
+      @company["name"] = params["company"]["name"]
+      @company["city"] = params["company"]["city"]
+      @company["state"] = params["company"]["state"]
+      @company.save
+    else
+      flash["notice"] = "You must be logged in."
+    end
+    redirect_to "/companies/#{@company["id"]}"
+  end
+ 
+  end
 end
