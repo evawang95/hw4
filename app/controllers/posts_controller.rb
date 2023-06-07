@@ -28,5 +28,4 @@ class PostsController < ApplicationController
     redirect_to "/companies/#{@company["id"]}"
   end
  
-  end
 end
