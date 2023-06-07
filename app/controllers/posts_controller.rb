@@ -18,5 +18,3 @@ class PostsController < ApplicationController
     else
       flash["notice"] = "You must be logged in."
   end
- 
-end
