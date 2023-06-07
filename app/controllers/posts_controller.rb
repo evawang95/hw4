@@ -19,3 +19,4 @@ class PostsController < ApplicationController
       flash["notice"] = "You must be logged in."
     end
   end
+end
